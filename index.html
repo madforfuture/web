@@ -1,48 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Mad for Future - Modern Website Development and Digital Marketing for students and startups.">
+  <meta name="author" content="Mad for Future">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Mad for Future - Modern Website Development and Digital Marketing for students and startups.">
-    <meta name="author" content="Mad for Future">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>MAD FOR FUTURE | Building Digital Identities</title>
 
-    <title>MAD FOR FUTURE | Building Digital Identities</title>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
 
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    
-    <style>
-      .whatsapp-float {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 40px;
-        right: 40px;
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 30px;
-        box-shadow: 2px 2px 3px #999;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .whatsapp-float:hover {
-        color: #FFF;
-        background-color: #128C7E;
-      }
-    </style>
-  </head>
+  <style>
+    /* Custom Modern Transitions */
+    :root {
+      --primary-color: #fe3f40;
+      --secondary-color: #03a4ed;
+      --glass-bg: rgba(255, 255, 255, 0.85);
+    }
+
+    body { overflow-x: hidden; }
+
+    /* Glassmorphism Header */
+    .header-area.header-sticky {
+      background: var(--glass-bg) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Floating Animation for Images */
+    .right-image img, .left-image img {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* WhatsApp Pulse Effect */
+    .whatsapp-float {
+      position: fixed;
+      width: 65px;
+      height: 65px;
+      bottom: 30px;
+      right: 30px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 35px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1) rotate(10deg);
+      background-color: #128C7E;
+      color: white;
+    }
+
+    /* Button Shimmer Transition */
+    .main-red-button a, .main-blue-button a {
+      position: relative;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+
+    .main-red-button a:after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 20%;
+      height: 200%;
+      background: rgba(255,255,255,0.3);
+      transform: rotate(30deg);
+      transition: 0.5s;
+    }
+
+    .main-red-button a:hover:after {
+      left: 120%;
+    }
+
+    /* Custom Mobile Alignments */
+    @media (max-width: 991px) {
+      .header-text { text-align: center; }
+      .main-red-button { margin: 0 auto; display: table; }
+      .left-content { margin-bottom: 50px; }
+      .section-heading { text-align: center; }
+      .item { margin-bottom: 30px; }
+    }
+
+    /* FAQ Section Styles */
+    .faq-section { padding: 80px 0; background: #f9f9f9; }
+    .accordion-item { border: none; margin-bottom: 15px; border-radius: 10px !important; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+    .accordion-button:not(.collapsed) { background-color: var(--secondary-color); color: white; }
+
+  </style>
+</head>
 
 <body>
 
@@ -60,6 +128,7 @@
       </div>
     </div>
   </div>
+
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
       <div class="row">
@@ -73,48 +142,34 @@
               <li class="scroll-to-section"><a href="#about">About Us</a></li>
               <li class="scroll-to-section"><a href="#services">Services</a></li>
               <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
-              <li class="scroll-to-section"><a href="#blog">How We Work</a></li> 
-              <li class="scroll-to-section"><a href="#contact">Message Us</a></li> 
+              <li class="scroll-to-section"><a href="#contact">Contact</a></li> 
               <li class="scroll-to-section"><div class="main-red-button"><a href="https://wa.me/918885359819">Chat Now</a></div></li> 
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
-            </nav>
+          </nav>
         </div>
       </div>
     </div>
   </header>
+
   <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <h6>Welcome to MAD FOR FUTURE</h6>
-                <h2>We Build <em>Digital Futures</em> &amp; <span>Strong</span> Online Identities</h2>
-                <p>We believe a website is not just a design — it is the digital foundation of your growth. Our mission is to create fast, responsive, and user-friendly websites for the next generation.</p>
-                <div class="main-red-button" style="margin-top: 30px;">
-                    <a href="#contact">Get Started Today</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/banner-right-image.png" alt="team meeting">
-              </div>
+        <div class="col-lg-6 align-self-center">
+          <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+            <h6>Empowering the next generation</h6>
+            <h2>We Build <em>Digital Futures</em> &amp; <span>Scalable</span> Online Brands</h2>
+            <p>At Mad For Future, we specialize in turning student projects into professional startups. Our websites are built with clean code, lightning-fast speed, and SEO-first architecture.</p>
+            <div class="main-red-button" style="margin-top: 30px;">
+                <a href="#contact">Launch Your Project</a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/banner-right-image.png" alt="team meeting">
-              </div>
-            </div>
+        <div class="col-lg-6">
+          <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+            <img src="assets/images/banner-right-image.png" alt="Development Team">
           </div>
         </div>
       </div>
@@ -126,7 +181,7 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="left-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-            <img src="assets/images/about-left-image.png" alt="person graphic">
+            <img src="assets/images/about-left-image.png" alt="Strategy">
           </div>
         </div>
         <div class="col-lg-8 align-self-center">
@@ -134,45 +189,37 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                  <div class="icon">
-                    <img src="assets/images/service-icon-01.png" alt="reporting">
-                  </div>
+                  <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
                   <div class="right-text">
                     <h4>Web Development</h4>
-                    <p>Static, dynamic, and portfolio websites tailored for students and startups.</p>
+                    <p>High-performance MERN & WordPress solutions for all needs.</p>
                   </div>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
-                  <div class="icon">
-                    <img src="assets/images/service-icon-02.png" alt="">
-                  </div>
+                  <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
                   <div class="right-text">
-                    <h4>UI / UX Design</h4>
-                    <p>Creating clean, modern, and mobile-first user experiences that convert.</p>
+                    <h4>UX Strategy</h4>
+                    <p>Behavior-driven design to convert visitors into loyal customers.</p>
                   </div>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
-                  <div class="icon">
-                    <img src="assets/images/service-icon-03.png" alt="">
-                  </div>
+                  <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
                   <div class="right-text">
-                    <h4>E-Commerce</h4>
-                    <p>Scalable online stores built to help growing businesses succeed online.</p>
+                    <h4>Startup Growth</h4>
+                    <p>Scalable e-commerce frameworks that grow with your business.</p>
                   </div>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
-                  <div class="icon">
-                    <img src="assets/images/service-icon-04.png" alt="">
-                  </div>
+                  <div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div>
                   <div class="right-text">
-                    <h4>SEO Optimization</h4>
-                    <p>Performance improvement to ensure your brand is found by the right audience.</p>
+                    <h4>SEO Dominance</h4>
+                    <p>Advanced technical SEO to rank your website on page one.</p>
                   </div>
                 </div>
               </div>
@@ -186,20 +233,20 @@
   <div id="services" class="our-services section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 align-self-center  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-          <div class="left-image">
+        <div class="col-lg-6 align-self-center">
+          <div class="left-image wow fadeInLeft" data-wow-duration="1s">
             <img src="assets/images/services-left-image.png" alt="">
           </div>
         </div>
-        <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+        <div class="col-lg-6 wow fadeInRight">
           <div class="section-heading">
-            <h2>Our Future-Focused <em>Approach</em> &amp; <span>Scalable</span> Solutions</h2>
-            <p>At Mad for Future, we focus on speed, security, and SEO-ready structures. Whether you are a student working on an academic project or an entrepreneur launching a startup, we provide transparent communication and long-term support.</p>
+            <h2>Our <em>Results</em> &amp; Quality <span>Commitment</span></h2>
+            <p>We don't just build websites; we build performance. Our metrics reflect our dedication to excellence and client satisfaction.</p>
           </div>
           <div class="row">
             <div class="col-lg-12">
               <div class="first-bar progress-skill-bar">
-                <h4>Responsive Development</h4>
+                <h4>Mobile Responsiveness</h4>
                 <span>100%</span>
                 <div class="filled-bar"></div>
                 <div class="full-bar"></div>
@@ -207,16 +254,8 @@
             </div>
             <div class="col-lg-12">
               <div class="second-bar progress-skill-bar">
-                <h4>SEO Performance</h4>
-                <span>92%</span>
-                <div class="filled-bar"></div>
-                <div class="full-bar"></div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="third-bar progress-skill-bar">
-                <h4>Customer Satisfaction</h4>
-                <span>98%</span>
+                <h4>Code Optimization</h4>
+                <span>95%</span>
                 <div class="filled-bar"></div>
                 <div class="full-bar"></div>
               </div>
@@ -227,140 +266,40 @@
     </div>
   </div>
 
-  <div id="portfolio" class="our-portfolio section">
+  <div class="faq-section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-            <h2>Explore Our <em>Services</em> &amp; What We <span>Deliver</span></h2>
+        <div class="col-lg-12 text-center">
+          <div class="section-heading wow fadeIn">
+            <h2>Frequently Asked <em>Questions</em></h2>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-              <div class="hidden-content">
-                <h4>Personal Branding</h4>
-                <p>Custom portfolios for students and creative creators.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-              <div class="hidden-content">
-                <h4>Business Growth</h4>
-                <p>Dynamic websites for startups and entrepreneurs.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-              <div class="hidden-content">
-                <h4>Maintenance</h4>
-                <p>Long-term support and website performance updates.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-              <div class="hidden-content">
-                <h4>Digital Strategy</h4>
-                <p>Complete marketing solutions for online success.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
- <div id="blog" class="our-blog section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="section-heading">
-            <h2>Why We Are <em>Different</em> &amp; How We <span>Work</span></h2>
-          </div>
-        </div>
-        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="top-dec">
-            <img src="assets/images/blog-dec.png" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="left-image">
-            <a href="#"><img src="assets/images/big-blog-thumb.jpg" alt="Our Vision"></a>
-            <div class="info">
-              <div class="inner-content">
-                <ul>
-                  <li><i class="fa fa-check"></i> Quality</li>
-                  <li><i class="fa fa-check"></i> Speed</li>
-                  <li><i class="fa fa-check"></i> Support</li>
-                </ul>
-                <a href="#"><h4>Our Future-Ready Mission</h4></a>
-                <p>We don't just deliver a product; we deliver a partnership. Our goal is to ensure that every student and startup we work with has a digital identity that can scale as they grow. We prioritize clean code and user-centric design above all else.</p>
-                <div class="main-blue-button">
-                  <a href="#contact">Start Your Project</a>
+        <div class="col-lg-8 offset-lg-2">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">
+                  How long does it take to build a website?
+                </button>
+              </h2>
+              <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Typical projects take 1-3 weeks depending on the complexity and features required.
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="right-list">
-            <ul>
-              <li>
-                <div class="left-content align-self-center">
-                  <span>Step 01</span>
-                  <a href="#"><h4>Discovery & Planning</h4></a>
-                  <p>We analyze your needs and create a roadmap for your digital success.</p>
+            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">
+                  Do you provide maintenance after launch?
+                </button>
+              </h2>
+              <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes! We provide 3 months of free maintenance and performance monitoring for every new site.
                 </div>
-                <div class="right-image">
-                  <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
-                </div>
-              </li>
-              <li>
-                <div class="left-content align-self-center">
-                  <span>Step 02</span>
-                  <a href="#"><h4>Creative Design & Dev</h4></a>
-                  <p>Our team builds your responsive, SEO-optimized website using modern tech.</p>
-                </div>
-                <div class="right-image">
-                  <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
-                </div>
-              </li>
-              <li>
-                <div class="left-content align-self-center">
-                  <span>Step 03</span>
-                  <a href="#"><h4>Launch & Growth</h4></a>
-                  <p>We deploy your site and provide marketing tools to help you connect and succeed.</p>
-                </div>
-                <div class="right-image">
-                  <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
-                </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -370,47 +309,34 @@
   <div id="contact" class="contact-us section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
+        <div class="col-lg-6 align-self-center wow fadeInLeft">
           <div class="section-heading">
-            <h2>Feel Free To Send Us a Message About Your Website Needs</h2>
-            <p>Ready to build your digital future? Reach out to us for a consultation or to discuss your upcoming project ideas.</p>
+            <h2>Let's Start Your <em>Success</em> Story</h2>
+            <p>Drop us a message and our team will get back to you within 24 hours with a custom quote.</p>
             <div class="phone-info">
-              <h4>For any enquiry, Call/WhatsApp: <span><i class="fa fa-phone"></i> <a href="https://wa.me/918885359819">+91 8885359819</a></span></h4>
-              <h4 style="margin-top: 15px;">Email Us: <span><i class="fa fa-envelope"></i> <a href="mailto:madforfuture@gmail.com">madforfuture@gmail.com</a></span></h4>
+              <h4>Direct Call/WhatsApp: <span><i class="fa fa-phone"></i> <a href="https://wa.me/918885359819">+91 8885359819</a></span></h4>
+              <h4 style="margin-top: 15px;">Official Email: <span><i class="fa fa-envelope"></i> <a href="mailto:madforfuture@gmail.com">madforfuture@gmail.com</a></span></h4>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-          <form id="contact" action="mailto:madforfuture@gmail.com" method="post" enctype="text/plain">
+        <div class="col-lg-6 wow fadeInRight">
+          <form id="contact-form" action="" method="post">
             <div class="row">
               <div class="col-lg-6">
-                <fieldset>
-                  <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                </fieldset>
+                <fieldset><input type="text" name="name" placeholder="Name" required></fieldset>
               </div>
               <div class="col-lg-6">
-                <fieldset>
-                  <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
-                </fieldset>
+                <fieldset><input type="text" name="subject" placeholder="Project Type" required></fieldset>
               </div>
               <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                </fieldset>
+                <fieldset><input type="email" name="email" placeholder="Your Email" required></fieldset>
               </div>
               <div class="col-lg-12">
-                <fieldset>
-                  <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>  
-                </fieldset>
+                <fieldset><textarea name="message" placeholder="Describe your vision..." required></textarea></fieldset>
               </div>
               <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="main-button ">Send Message</button>
-                </fieldset>
+                <fieldset><button type="submit" id="form-submit" class="main-button">Send Message Now</button></fieldset>
               </div>
-            </div>
-            <div class="contact-dec">
-              <img src="assets/images/contact-decoration.png" alt="">
             </div>
           </form>
         </div>
@@ -419,16 +345,21 @@
   </div>
 
   <footer>
-    <div class="container">
+    <div class="container text-center">
       <div class="row">
-        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
-          <p>© Copyright 2026 MAD FOR FUTURE. All Rights Reserved. 
-          
-          <br>Helping students and startups build digital futures.</p>
+        <div class="col-lg-12">
+          <p>© Copyright 2026 <strong>MAD FOR FUTURE</strong>. 
+          <br>Innovating digital identities for students & entrepreneurs.</p>
+          <div class="social-links mt-3">
+            <a href="#" style="color:white; margin: 0 10px;"><i class="fa fa-instagram"></i></a>
+            <a href="#" style="color:white; margin: 0 10px;"><i class="fa fa-linkedin"></i></a>
+            <a href="#" style="color:white; margin: 0 10px;"><i class="fa fa-facebook"></i></a>
+          </div>
         </div>
       </div>
     </div>
   </footer>
+
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
