@@ -44,21 +44,11 @@
       background-color: #128C7E;
     }
 
-    /* Logo Uniformity Fix for Root Images */
-    .client-logo-img {
+    .client-feature-img {
       width: 100% !important;
       height: 220px !important;
-      object-fit: contain !important;
-      background-color: #ffffff;
-      padding: 10px;
+      object-fit: cover !important;
       border-radius: 20px;
-    }
-
-    .right-list .right-image img {
-      width: 120px !important;
-      height: 120px !important;
-      object-fit: contain !important;
-      border-radius: 10px;
     }
   </style>
 </head>
@@ -199,7 +189,7 @@
   <div id="services" class="our-services section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 align-self-center  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+        <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
           <div class="left-image">
             <img src="assets/images/services-left-image.png" alt="">
           </div>
@@ -207,7 +197,7 @@
         <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
           <div class="section-heading">
             <h2>Our Future-Focused <em>Approach</em> &amp; <span>Scalable</span> Solutions</h2>
-            <p>At Mad for Future, we focus on speed, security, and SEO-ready structures. Whether you are a student working on an academic project or an entrepreneur launching a startup, we provide transparent communication and long-term support.</p>
+            <p>At Mad for Future, we focus on speed, security, and SEO-ready structures.</p>
           </div>
           <div class="row">
             <div class="col-lg-12">
@@ -244,7 +234,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+          <div class="section-heading wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
             <h2>Explore Our <em>Services</em> &amp; What We <span>Deliver</span></h2>
           </div>
         </div>
@@ -318,16 +308,14 @@
       <div class="row">
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
           <div class="left-image">
-            <a href="#"><img src="sh.png" alt="SH Technologies" class="client-logo-img"></a>
+            <img src="assets/images/about-left-image.png" alt="Feature" class="client-feature-img">
             <div class="info">
               <div class="inner-content">
                 <ul>
                   <li><i class="fa fa-video-camera"></i> Video Editing</li>
                   <li><i class="fa fa-bullhorn"></i> Content Creation</li>
                 </ul>
-                <a href="#">
-                  <h4>SH Technologies</h4>
-                </a>
+                <h4>SH Technologies</h4>
                 <p>Delivering high-quality video editing and creative content services to help SH Technologies captivate their audience.</p>
                 <div class="main-blue-button">
                   <a href="#contact">Start Your Project</a>
@@ -342,25 +330,21 @@
               <li>
                 <div class="left-content align-self-center">
                   <span>Export & Trade</span>
-                  <a href="/hs">
-                    <h4>HS Global Export</h4>
-                  </a>
+                  <h4>HS Global Export</h4>
                   <p>Managing Digital Marketing strategies and Technical Support to drive their global expansion.</p>
                 </div>
                 <div class="right-image">
-                  <a href="/hs.jpeg"><img src="hs.jpeg" alt="HS Global Export"></a>
+                  <img src="assets/images/service-icon-01.png" alt="HS Global" style="width: 80px;">
                 </div>
               </li>
               <li>
                 <div class="left-content align-self-center">
                   <span>Future Partners</span>
-                  <a href="#">
-                    <h4>Your Brand Here</h4>
-                  </a>
+                  <h4>Your Brand Here</h4>
                   <p>Join our growing list of partners and build your professional digital identity.</p>
                 </div>
                 <div class="right-image">
-                  <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
+                  <img src="assets/images/blog-thumb-01.jpg" alt="Partner">
                 </div>
               </li>
             </ul>
@@ -375,9 +359,8 @@
         <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
           <div class="section-heading">
             <h2>Feel Free To Send Us a Message About Your Website Needs</h2>
-            <p>Ready to build your digital future? Reach out to us for a consultation or to discuss your upcoming project ideas.</p>
             <div class="phone-info">
-              <h4>For any enquiry, Call/WhatsApp: <span><i class="fa fa-phone"></i> <a href="https://wa.me/918885359819">+91 8885359819</a></span></h4>
+              <h4>Call/WhatsApp: <span><i class="fa fa-phone"></i> <a href="https://wa.me/918885359819">+91 8885359819</a></span></h4>
               <h4 style="margin-top: 15px;">Email Us: <span><i class="fa fa-envelope"></i> <a href="mailto:madforfuture@gmail.com">madforfuture@gmail.com</a></span></h4>
             </div>
           </div>
@@ -386,33 +369,20 @@
           <form id="contact" action="mailto:madforfuture@gmail.com" method="post" enctype="text/plain">
             <div class="row">
               <div class="col-lg-6">
-                <fieldset>
-                  <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                </fieldset>
+                <fieldset><input type="name" name="name" placeholder="Name" required></fieldset>
               </div>
               <div class="col-lg-6">
-                <fieldset>
-                  <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
-                </fieldset>
+                <fieldset><input type="surname" name="surname" placeholder="Surname" required></fieldset>
               </div>
               <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                </fieldset>
+                <fieldset><input type="text" name="email" placeholder="Your Email" required></fieldset>
               </div>
               <div class="col-lg-12">
-                <fieldset>
-                  <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>
-                </fieldset>
+                <fieldset><textarea name="message" class="form-control" placeholder="Message" required></textarea></fieldset>
               </div>
               <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="main-button ">Send Message</button>
-                </fieldset>
+                <fieldset><button type="submit" class="main-button">Send Message</button></fieldset>
               </div>
-            </div>
-            <div class="contact-dec">
-              <img src="assets/images/contact-decoration.png" alt="">
             </div>
           </form>
         </div>
@@ -423,10 +393,8 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
-          <p>© Copyright 2026 MAD FOR FUTURE. All Rights Reserved.
-            <br>Helping students and startups build digital futures.
-          </p>
+        <div class="col-lg-12">
+          <p>© Copyright 2026 MAD FOR FUTURE. All Rights Reserved.</p>
         </div>
       </div>
     </div>
@@ -440,9 +408,4 @@
   <script src="assets/js/templatemo-custom.js"></script>
 
 </body>
-
 </html>
-
-
-
-
